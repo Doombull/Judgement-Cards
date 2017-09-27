@@ -1,0 +1,31 @@
+<!doctype html>
+<html manifest="cache.manifest">
+	<meta charset="utf-8">
+	<title>Judgement Card Viewer</title>
+
+	<meta name="viewport" content="width=1024,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
+
+	<link rel="stylesheet" href="Site.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+
+	<script src="appController.js"></script>
+</head>
+<body>
+	<div ng-app="app" ng-controller="controller">
+		<div class="card" data-ng-click="flipCard($event)">
+			a
+			<div style="width: 400px; height: 200px; position:absolute; top: 400px">
+				In a 10-Q released on Aug. 9, 2017, Stericycle disclosed that it is the subject of a Foreign Corrupt Practices Act investigation related to its business in Latin America. We spoke with management,
+			</div>
+			<div style="width: 400px; height: 200px; position:absolute; top: 400px" data-ng-click="addDamage($event)">
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>

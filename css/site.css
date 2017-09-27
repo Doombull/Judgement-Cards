@@ -1,0 +1,17 @@
+body
+{
+	width: 1014px;
+	height: 731px;
+	margin: 0px;
+	background-color: #555555;
+	padding: 5px;
+	padding-top: 10px;
+}
+
+.card 
+{
+    width:400px;
+    height:600px; 
+    border: 1px solid black;
+    background-color: white;
+}
