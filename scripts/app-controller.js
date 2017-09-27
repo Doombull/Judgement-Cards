@@ -1,8 +1,9 @@
-angular.module('app', [])
-.controller('controller', function ($scope) {
+app.controller('appController', function ($scope) {
 
     $scope.flipCard = function($event) {
         console.log(Date.now() + ' Executing flipCard');
+
+        document.querySelector(".card-container").classList.toggle("flipped");
     };
 
     $scope.addDamage = function($event) {

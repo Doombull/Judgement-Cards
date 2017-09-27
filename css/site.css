@@ -8,10 +8,47 @@ body
 	padding-top: 10px;
 }
 
-.card 
-{
+.card-container {
+	perspective: 1000px;
+    width:400px;
+    height:600px; 
+}
+
+/* flip the pane when hovered */
+.card-container.flipped .card {
+	transform: rotateY(180deg);
+}
+
+/* flip speed goes here */
+.card {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
     width:400px;
     height:600px; 
     border: 1px solid black;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+    width:400px;
+    height:600px; 
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
     background-color: white;
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+    background-color: red;
 }
