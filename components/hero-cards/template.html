@@ -1,4 +1,4 @@
-<div class="card-container" data-ng-click="flipCard($event)">
+<div id="{{hero}}" class="card-container {{ flipped ? 'flipped' : '' }}" data-ng-click="flipped = !flipped">
     <div class="card">
         <div class="front">
             <div style="width: 400px; height: 200px; position:absolute; top: 400px">
@@ -6,7 +6,7 @@
             </div>
         </div>
         <div class="back">
-            <div style="width: 400px; height: 200px; position:absolute; top: 400px; border: 2px solid red;" data-ng-click="addDamage($event)">
+            <div style="width: 400px; height: 200px; position:absolute; top: 400px;" data-ng-click="recordDamage({message:$event}); $event.stopPropagation();">
                 damage
             </div>
         </div>

@@ -15,13 +15,13 @@
 </head>
 <body>
 	<div ng-app="app" ng-controller="appController">
-		<hero></hero>
+		<hero-cards hero="Thorgar" record-damage="addDamage(message)"></hero-cards>
 	</div>
 
 	<script type="text/javascript">
 		var app = angular.module("app", []);
 	</script>
-	<script src="components/hero/directive.js"></script>
+	<script src="components/hero-cards/directive.js"></script>
 	<script src="scripts/app-controller.js"></script>
 </body>
 </html>
