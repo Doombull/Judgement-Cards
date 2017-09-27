@@ -1,14 +1,14 @@
 <div id="{{hero}}" class="card-container {{ flipped ? 'flipped' : '' }}" data-ng-click="flipped = !flipped">
     <div class="card">
         <div class="front">
-            <div style="width: 400px; height: 200px; position:absolute; top: 400px">
-                In a 10-Q released on Aug. 9, 2017, Stericycle disclosed that it is the subject of a Foreign Corrupt Practices Act investigation related to its business in Latin America. We spoke with management,
+        	<img src="images/front.png" class="card-face" />
+            <div style="width: 103px; height: 108px; position:absolute; top: 250px;" data-ng-click="recordDamage({message:$event,increase:false})">
+            </div>
+            <div style="width: 160px; height: 108px; position:absolute; top: 250px; left: 103px;" data-ng-click="recordDamage({message:$event,increase:true})">
             </div>
         </div>
         <div class="back">
-            <div style="width: 400px; height: 200px; position:absolute; top: 400px;" data-ng-click="recordDamage({message:$event}); $event.stopPropagation();">
-                damage
-            </div>
+        	<img src="images/back.png" class="card-face" />
         </div>
     </div>
 </div>
