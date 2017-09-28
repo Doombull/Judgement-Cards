@@ -10,13 +10,18 @@ app.controller('appController', function ($scope) {
     $scope.hideEditScreens = function () {
         $scope.showEditHeros = false;
         $scope.showEditItems = false;
-    };  
+    }; 
     
     $scope.showManageItems = function ($event, hero) {
         $event.stopPropagation();
         $scope.showEditItems = true;
-        $scope.items.hero = $scope.heros.all.findIndex(i => i.name === hero.name);
-    };   
+
+        for (var i=0, len=$scope.heros.all.length; i<len; i++) {            
+            if ($scope.heros.all[i].name == hero.name) {
+                $scope.items.hero = i;
+            }
+        }    
+    }; 
 
     $scope.heros = {};
     $scope.heros.all = [
@@ -122,9 +127,6 @@ app.controller('appController', function ($scope) {
     ];
     
     $scope.items = {};
-
-    $scope.items.hero = 0;
-
     $scope.items.offensive = [
         {
             displayName: 'None',
@@ -196,7 +198,7 @@ app.controller('appController', function ($scope) {
         {
             displayName: 'Healing Surge',
             cost: 2,
-            description: 'Spend an action to fully heal self or base-to-base ally. One use only.'
+            description: 'Spend an action to fully heal self or b2b ally. One use only.'
         },
         {
             displayName: 'Minotaur Essence',
