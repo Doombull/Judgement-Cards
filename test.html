@@ -1,35 +1,85 @@
-<!doctype html>
-<html>
-	<meta charset="utf-8">
-	<title>Judgement Card Viewer</title>
+$scope.shouldShowOverlay = function () {
+    if ($scope.showEditHeros || $scope.showEditItems)
+        return true;
+    
+    return false;
+};
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
-</head>
-<body>
-		<button ng-click="count = count + 1" >
-				Increment
-			  </button>
-			  <span>
-				count: {{count}}
-			  </span>
-	<div ng-app="app" ng-controller="appController">
-		<hero-cards hero="heros.all[0]" record-damage="addDamage(message, increase)"></hero-cards>
-	</div>
-
-	<br/>
+$scope.hideEditScreens = function () {
+    $scope.showEditHeros = false;
+    $scope.showEditItems = false;
+};
 
 
-	<input type="button" value="Edit Heros"  data-ng-click="alert('click'); showEditHeros = true;"/>
 
-	<div id="overlay" class="overlay {{ showEditHeros ? 'show' : '' }}" data-ng-click="showEditHeros = false">
 
-	</div>
-
-	<script type="text/javascript">
-		var app = angular.module("app", []);
-	</script>
-	<script src="components/hero-cards/directive.js"></script>
-	<script src="scripts/app-controller.js"></script>
-</body>
-</html>
+$scope.items = {};
+$scope.items.offensive = [
+    {
+        name: 'Armour Shredder',
+        cost: 1,
+        description: 'Reduce targets RES by 1.'
+    },
+    {
+        name: 'Boots of Agility',
+        cost: 1,
+        description: 'Pathfinder.'
+    },
+    {
+        name: 'Boots of Speed',
+        cost: 1,
+        description: '+1 MOV.'
+    },
+    {
+        name: 'Heart Seeker',
+        cost: 1,
+        description: '+1 RNG.'
+    },
+    {
+        name: 'Ring of Power',
+        cost: 1,
+        description: '+1 MAG.'
+    },
+    {
+        name: 'Vorpal Blade',
+        cost: 1,
+        description: '+1 MEL'
+    }
+];
+$scope.items.defensive = [
+    {
+        name: 'Blood Sucker',
+        cost: 1,
+        description: 'Leech(1).'
+    },
+    {
+        name: 'Boots of Agility',
+        cost: 1,
+        description: '+1 AGI.'
+    },
+    {
+        name: 'Elixir of Life',
+        cost: 1,
+        description: 'When reduced to 0 health, heal 1. One use only.'
+    },
+    {
+        name: 'Gift of the Gods',
+        cost: 1,
+        description: 'Spend 1 Fate to force opponent to reroll attack or ability.'
+    },
+    {
+        name: 'Glyph of Warding',
+        cost: 2,
+        description: '+1 RES. Cannot be used by Defenders.'
+    },
+    {
+        name: 'Healing Surge',
+        cost: 2,
+        description: 'Spend an action to fully heal self or base-to-base ally. One use only.'
+    },
+    {
+        name: 'Minotaur Essence',
+        cost: 1,
+        description: 'Regeneration(1).'
+    }
+];

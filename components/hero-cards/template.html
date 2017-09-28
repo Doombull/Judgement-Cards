@@ -2,6 +2,18 @@
     <div class="card">
         <div class="front">
         	<img data-ng-src="images/{{hero.name}}-0-0.png" class="card-face" />
+            <div class="statCardItemContainer">
+                <div class="statCardItem" data-ng-if="hero.offensiveItem">
+                    <b>{{items.offensive[hero.offensiveItem].displayName}}:</b>
+                    {{items.offensive[hero.offensiveItem].description}}
+                </div>
+                <div class="statCardItem" data-ng-if="hero.defensiveItem">
+                    <b>{{items.defensive[hero.defensiveItem].displayName}}:</b>
+                    {{items.defensive[hero.defensiveItem].description}}
+                </div>
+            </div>
+            <div class="statCardItemTarget" data-ng-click="manageItems({$event:$event,hero:hero})">
+            </div>
             <div class="statCardDamageContainer">
                 <img class="statCardDamage" src="images/x-mark-16.png" data-ng-repeat="damage in hero.damage"/>
             </div>

@@ -63,6 +63,31 @@ body
 	transform: rotateY(180deg);
 }
 
+.statCardItemContainer {
+	position: absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+}
+
+.statCardItem {
+	width:80%;
+	padding: 5px;
+	margin: 10px auto;
+	border: 1px solid #cc9900;
+	background-color: #ffcc00;
+	color: #996633;
+	font-size: 8pt;
+}
+
+.statCardItemTarget {
+	position: absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height: 75px;
+}
+
 .statCardDamageContainer {
 	position: absolute;
 	left: 19px;
@@ -94,7 +119,6 @@ body
 
 .overlay {
 	position: fixed; /* Sit on top of the page content */
-	display: none; /* Hidden by default */
 	width: 100%; /* Full width (cover the whole page) */
 	height: 100%; /* Full height (cover the whole page) */
 	top: 0; 
@@ -120,10 +144,8 @@ body
 	margin: 30px auto 20px auto;
 }
 
-.editHeros{
+.manageWindow{
 	position: absolute;
-	width: 500px;
-	height: 360px;
 	top: 50%;
 	left: 50%;
 	-ms-transform: translate(-50%,-50%);
@@ -133,18 +155,33 @@ body
 	padding: 10px 20px;
 }
 
-.editHeros .heading{
+.manageWindow .heading{
 	font-size: 20pt;
 	font-weight: bold;
 	text-align: center;
 }
 
-.editHeros .heroList{
+.manageWindow .list{
 	width: 50%;
 	float: left;
 }
 
-.editHeros .heroListItem{
+.manageWindow .listItem{
 	margin: 20px 0px;
 	font-size: 14pt;
+}
+
+.manageWindow .listItem .description{
+	font-size: 11pt;
+	margin-left: 25px;
+}
+
+.editHeros{
+	width: 500px;
+	height: 360px;
+}
+
+.editItems{
+	width: 750px;
+	height: 500px;
 }

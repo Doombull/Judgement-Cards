@@ -3,7 +3,8 @@ app.directive("heroCards",  function() {
         templateUrl : "components/hero-cards/template.html",
         scope: {
             hero: "=",
-            recordDamage: "&"
+            items: "=",
+            manageItems: "&"
         },
         link : function(scope, element, attrs) {
             scope.hero.damage = [];

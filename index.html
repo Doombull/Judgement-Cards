@@ -16,28 +16,48 @@
 <body>
 	<div ng-app="app" ng-controller="appController">
 		<div data-ng-repeat="hero in heros.all | filter:{selected:true}">
-			<hero-cards hero="hero" record-damage="addDamage(message, increase)"></hero-cards>
+			<hero-cards hero="hero" items="items" manage-items="showManageItems($event,hero)"></hero-cards>
 		</div>
 		
 		<div class="openEditHerosContainer">
 			<input type="button" class="openEditHeros" value="Manage Hero Cards"  data-ng-click="showEditHeros = true"/>
 		</div>
 		
-		<div class="overlay {{ showEditHeros ? 'show' : '' }}" data-ng-click="showEditHeros = false">
-			<div class="editHeros" data-ng-click="$event.stopPropagation()">
+		<div class="overlay" data-ng-click="hideEditScreens()" data-ng-if="shouldShowOverlay()">
+			<div class="manageWindow editHeros" data-ng-click="$event.stopPropagation()" data-ng-if="showEditHeros">
 				<div class="heading">Manage Hero Cards</div>
 
-				<div class="heroList">
-					<div class="heroListItem" data-ng-repeat="hero in heros.all" ng-if="$index < (heros.all.length / 2)">
+				<div class="list">
+					<div class="listItem" data-ng-repeat="hero in heros.all" ng-if="$index < (heros.all.length / 2)">
 						<input type="checkbox" id="{{ hero.displayName }}" data-ng-model="hero.selected" />
 						<label for="{{ hero.displayName }}">{{ hero.displayName }}</label>
 					</div>
 				</div>
 				
-				<div class="heroList">
-					<div class="heroListItem" data-ng-repeat="hero in heros.all" ng-if="$index >= (heros.all.length / 2)">
+				<div class="list">
+					<div class="listItem" data-ng-repeat="hero in heros.all" ng-if="$index >= (heros.all.length / 2)">
 						<input type="checkbox" id="{{ hero.displayName }}" data-ng-model="hero.selected" />
 						<label for="{{ hero.displayName }}">{{ hero.displayName }}</label>
+					</div>
+				</div>
+			</div>
+			
+			<div class="manageWindow editItems" data-ng-click="$event.stopPropagation()" data-ng-if="showEditItems">
+				<div class="heading">Manage Items for {{heros.all[items.hero].displayName}}</div>
+	
+				<div class="list" style="width: 35%">
+					<div class="listItem" data-ng-repeat="item in items.offensive">
+						<input type="radio" name="offensiveItem" id="offensiveItem{{ $index }}" data-ng-model="heros.all[items.hero].offensiveItem" data-ng-value="{{ $index }}" />
+						<label for="offensiveItem{{ $index }}">{{ item.displayName }}</label>
+						<div class="description" data-ng-if="item.description">Cost: {{item.cost}} Fate. {{item.description}}</div>
+					</div>
+				</div>
+				
+				<div class="list" style="width: 65%">
+					<div class="listItem" data-ng-repeat="item in items.defensive">
+						<input type="radio" name="defensiveItem" id="defensiveItem{{ $index }}" data-ng-model="heros.all[items.hero].defensiveItem" data-ng-value="{{ $index }}" />
+						<label for="defensiveItem{{ $index }}">{{ item.displayName }}</label>
+						<div class="description" data-ng-if="item.description">Cost: {{item.cost}} Fate. {{item.description}}</div>
 					</div>
 				</div>
 			</div>
