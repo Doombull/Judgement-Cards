@@ -1,11 +1,25 @@
-<div id="{{hero}}" class="card-container {{ flipped ? 'flipped' : '' }}" data-ng-click="flipped = !flipped">
+<div class="card-container {{ statCardFlipped ? 'flipped' : '' }}" data-ng-click="statCardFlipped = !statCardFlipped">
+    <div class="card">
+        <div class="front">
+        	<img src="images/Brok00.png" class="card-face" />
+            <div class="statCardDamageContainer">
+                <img class="statCardDamage" src="images/x-mark-16.png" data-ng-repeat="damage in hero.damage"/>
+            </div>
+            <div class="statCardRemoveDamageTarget" data-ng-click="recordDamage($event,false)">
+            </div>
+            <div class="statCardAddDamageTarget" data-ng-click="recordDamage($event,true)">
+            </div>
+        </div>
+        <div class="back">
+        	<img src="images/Brok01.png" class="card-face" />
+        </div>
+    </div>
+</div>
+
+<div class="card-container {{ ruleCardFlipped ? 'flipped' : '' }}" data-ng-click="ruleCardFlipped = !ruleCardFlipped">
     <div class="card">
         <div class="front">
         	<img src="images/front.png" class="card-face" />
-            <div style="width: 103px; height: 108px; position:absolute; top: 250px;" data-ng-click="recordDamage({message:$event,increase:false})">
-            </div>
-            <div style="width: 160px; height: 108px; position:absolute; top: 250px; left: 103px;" data-ng-click="recordDamage({message:$event,increase:true})">
-            </div>
         </div>
         <div class="back">
         	<img src="images/back.png" class="card-face" />

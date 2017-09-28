@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+	<meta charset="utf-8">
+	<title>Judgement Card Viewer</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+</head>
+<body>
+		<button ng-click="count = count + 1" >
+				Increment
+			  </button>
+			  <span>
+				count: {{count}}
+			  </span>
+	<div ng-app="app" ng-controller="appController">
+		<hero-cards hero="heros.all[0]" record-damage="addDamage(message, increase)"></hero-cards>
+	</div>
+
+	<br/>
+
+
+	<input type="button" value="Edit Heros"  data-ng-click="alert('click'); showEditHeros = true;"/>
+
+	<div id="overlay" class="overlay {{ showEditHeros ? 'show' : '' }}" data-ng-click="showEditHeros = false">
+
+	</div>
+
+	<script type="text/javascript">
+		var app = angular.module("app", []);
+	</script>
+	<script src="components/hero-cards/directive.js"></script>
+	<script src="scripts/app-controller.js"></script>
+</body>
+</html>

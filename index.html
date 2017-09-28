@@ -3,7 +3,7 @@
 	<meta charset="utf-8">
 	<title>Judgement Card Viewer</title>
 
-	<meta name="viewport" content="width=1024,user-scalable=no">
+	<meta name="viewport" content="width=1024,user-scalable=no,initial-scale=1, maximum-scale=1, minimum-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes" />
 
 	<link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
@@ -15,7 +15,33 @@
 </head>
 <body>
 	<div ng-app="app" ng-controller="appController">
-		<hero-cards hero="Thorgar" record-damage="addDamage(message, increase)"></hero-cards>
+		<div data-ng-repeat="hero in heros.all | filter:{selected:true}">
+			<hero-cards hero="hero" record-damage="addDamage(message, increase)"></hero-cards>
+		</div>
+		
+		<div class="openEditHerosContainer">
+			<input type="button" class="openEditHeros" value="Manage Hero Cards"  data-ng-click="showEditHeros = true"/>
+		</div>
+		
+		<div class="overlay {{ showEditHeros ? 'show' : '' }}" data-ng-click="showEditHeros = false">
+			<div class="editHeros" data-ng-click="$event.stopPropagation()">
+				<div class="heading">Manage Hero Cards</div>
+
+				<div class="heroList">
+					<div class="heroListItem" data-ng-repeat="hero in heros.all" ng-if="$index < (heros.all.length / 2)">
+						<input type="checkbox" id="{{ hero.name }}" data-ng-model="hero.selected" />
+						<label for="{{ hero.name }}">{{ hero.name }}</label>
+					</div>
+				</div>
+				
+				<div class="heroList">
+					<div class="heroListItem" data-ng-repeat="hero in heros.all" ng-if="$index >= (heros.all.length / 2)">
+						<input type="checkbox" id="{{ hero.name }}" data-ng-model="hero.selected" />
+						<label for="{{ hero.name }}">{{ hero.name }}</label>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<script type="text/javascript">

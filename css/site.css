@@ -1,23 +1,28 @@
 body
 {
 	width: 1014px;
-	height: 731px;
+	height: 731px;	
 	margin: 0px;
 	background-color: #555555;
 	padding: 5px;
-	padding-top: 10px;
+	padding-right: 0px;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 .card-container {
 	-webkit-perspective: 1000;
 	perspective: 1000px;
-    width:263px;
-    height:358px; 
+    width:248px;
+	height:338px; 
+	float: left;
+	margin-right: 5px;
+	margin-bottom: 5px;
 }
 
 /* flip the pane when hovered */
 .card-container.flipped .card {
 	-webkit-transform: rotateY(180deg);
+	transform: rotateY(180deg);
 }
 
 /* flip speed goes here */
@@ -25,36 +30,121 @@ body
 	transition: 0.6s;
 	transform-style: preserve-3d;
 	position: relative;
-    width:263px;
-    height:358px; 
+	width: 100%;
+	height: 100%;
     border: 1px solid black;
 }
 
 .card-face
 {
 	width: 100%;
-	height: 100%
+	height: 100%;
 }
 
 /* hide back of pane during swap */
 .front, .back {
     -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 	position: absolute;
 	top: 0;
 	left: 0;
-    width:263px;
-    height:358px;  
+	width: 100%;
+	height: 100%;
 }
 
-/* front pane, placed above back */
 .front {
 	z-index: 2;
 	-webkit-transform: rotateY(0deg);
-    background-color: white;
+	transform: rotateY(0deg);
 }
 
-/* back, initially hidden pane */
 .back {
 	-webkit-transform: rotateY(180deg);
-    background-color: red;
+	transform: rotateY(180deg);
+}
+
+.statCardDamageContainer {
+	position: absolute;
+	left: 19px;
+	top: 266px;
+	height:55px;
+	width: 220px;
+}
+
+.statCardDamage {
+	float: left;
+	margin-right: 8px;
+	margin-bottom: 2px;
+}
+
+.statCardRemoveDamageTarget {
+	width: 90px;
+	height: 85px;
+	position:absolute;
+	top: 250px;
+}
+
+.statCardAddDamageTarget {
+	width: 158px;
+	height: 85px;
+	position:absolute;
+	top: 250px;
+	left: 90px;
+}
+
+.overlay {
+	position: fixed; /* Sit on top of the page content */
+	display: none; /* Hidden by default */
+	width: 100%; /* Full width (cover the whole page) */
+	height: 100%; /* Full height (cover the whole page) */
+	top: 0; 
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+	z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+} 
+.show {
+	display: block;
+}
+
+.openEditHerosContainer {
+	clear: both;
+	width: 100%;
+	text-align: center;
+}
+
+.openEditHeros {
+	width: 200px;
+	height: 30px;
+	margin: 30px auto 20px auto;
+}
+
+.editHeros{
+	position: absolute;
+	width: 500px;
+	height: 360px;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	background-color: white;
+	border: 1px solid black;
+	padding: 10px 20px;
+}
+
+.editHeros .heading{
+	font-size: 20pt;
+	font-weight: bold;
+	text-align: center;
+}
+
+.editHeros .heroList{
+	width: 50%;
+	float: left;
+}
+
+.editHeros .heroListItem{
+	margin: 20px 0px;
+	font-size: 14pt;
 }
