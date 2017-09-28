@@ -29,15 +29,15 @@
 
 				<div class="heroList">
 					<div class="heroListItem" data-ng-repeat="hero in heros.all" ng-if="$index < (heros.all.length / 2)">
-						<input type="checkbox" id="{{ hero.name }}" data-ng-model="hero.selected" />
-						<label for="{{ hero.name }}">{{ hero.name }}</label>
+						<input type="checkbox" id="{{ hero.displayName }}" data-ng-model="hero.selected" />
+						<label for="{{ hero.displayName }}">{{ hero.displayName }}</label>
 					</div>
 				</div>
 				
 				<div class="heroList">
 					<div class="heroListItem" data-ng-repeat="hero in heros.all" ng-if="$index >= (heros.all.length / 2)">
-						<input type="checkbox" id="{{ hero.name }}" data-ng-model="hero.selected" />
-						<label for="{{ hero.name }}">{{ hero.name }}</label>
+						<input type="checkbox" id="{{ hero.displayName }}" data-ng-model="hero.selected" />
+						<label for="{{ hero.displayName }}">{{ hero.displayName }}</label>
 					</div>
 				</div>
 			</div>
