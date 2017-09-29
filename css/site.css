@@ -13,10 +13,10 @@ body
 	-webkit-perspective: 1000;
 	perspective: 1000px;
     width:248px;
-	height:338px; 
+	height:347px; 
 	float: left;
 	margin-right: 5px;
-	margin-bottom: 5px;
+	margin-bottom: 15px;
 }
 
 /* flip the pane when hovered */
@@ -90,30 +90,30 @@ body
 
 .statCardDamageContainer {
 	position: absolute;
-	left: 19px;
-	top: 266px;
-	height:55px;
-	width: 220px;
+	left: 10px;
+	top: 282px;
+	height:60px;
+	width: 250px;
 }
 
 .statCardDamage {
 	float: left;
-	margin-right: 8px;
-	margin-bottom: 2px;
+	margin-right: 10.4px;
+	margin-bottom: 3px;
 }
 
 .statCardRemoveDamageTarget {
 	width: 90px;
 	height: 85px;
 	position:absolute;
-	top: 250px;
+	top: 256px;
 }
 
 .statCardAddDamageTarget {
 	width: 158px;
 	height: 85px;
 	position:absolute;
-	top: 250px;
+	top: 256px;
 	left: 90px;
 }
 
@@ -152,13 +152,15 @@ body
 	transform: translate(-50%,-50%);
 	background-color: white;
 	border: 1px solid black;
-	padding: 10px 20px;
+	padding: 5px;
 }
 
 .manageWindow .heading{
 	font-size: 20pt;
 	font-weight: bold;
 	text-align: center;
+	background-color: Gainsboro;
+	padding: 10px;
 }
 
 .manageWindow .list{
@@ -166,8 +168,12 @@ body
 	float: left;
 }
 
+.manageWindow .list fieldset{
+	margin-top: 15px;
+}
+
 .manageWindow .listItem{
-	margin: 20px 0px;
+	margin: 10px 0px 20px 0px;
 	font-size: 14pt;
 }
 
@@ -182,6 +188,6 @@ body
 }
 
 .editItems{
-	width: 750px;
-	height: 550px;
+	width: 850px;
+	height: 600px;
 }

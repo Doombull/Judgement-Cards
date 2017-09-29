@@ -46,19 +46,25 @@
 				<div class="heading">Manage Items for {{heros.all[items.hero].displayName}}</div>
 	
 				<div class="list" style="width: 35%">
-					<div class="listItem" data-ng-repeat="item in items.offensive">
-						<input type="radio" name="offensiveItem" id="offensiveItem{{ $index }}" data-ng-model="heros.all[items.hero].offensiveItem" data-ng-value="{{ $index }}" />
-						<label for="offensiveItem{{ $index }}">{{ item.displayName }}</label>
-						<div class="description" data-ng-if="item.description">Cost: {{item.cost}} Fate. {{item.description}}</div>
-					</div>
+					<fieldset>
+						<legend>Offensive Items:</legend>
+						<div class="listItem" data-ng-repeat="item in items.offensive">
+							<input type="radio" name="offensiveItem" id="offensiveItem{{ $index }}" data-ng-model="heros.all[items.hero].offensiveItem" data-ng-value="{{ $index }}" />
+							<label for="offensiveItem{{ $index }}">{{ item.displayName }}</label>
+							<div class="description" data-ng-if="item.description">Cost: {{item.cost}} Fate. {{item.description}}</div>
+						</div>
+					</fieldset>
 				</div>
 				
 				<div class="list" style="width: 65%">
-					<div class="listItem" data-ng-repeat="item in items.defensive">
-						<input type="radio" name="defensiveItem" id="defensiveItem{{ $index }}" data-ng-model="heros.all[items.hero].defensiveItem" data-ng-value="{{ $index }}" />
-						<label for="defensiveItem{{ $index }}">{{ item.displayName }}</label>
-						<div class="description" data-ng-if="item.description">Cost: {{item.cost}} Fate. {{item.description}}</div>
-					</div>
+					<fieldset>
+						<legend>Defensive Items:</legend>
+						<div class="listItem" data-ng-repeat="item in items.defensive">
+							<input type="radio" name="defensiveItem" id="defensiveItem{{ $index }}" data-ng-model="heros.all[items.hero].defensiveItem" data-ng-value="{{ $index }}" />
+							<label for="defensiveItem{{ $index }}">{{ item.displayName }}</label>
+							<div class="description" data-ng-if="item.description">Cost: {{item.cost}} Fate. {{item.description}}</div>
+						</div>
+					</fieldset>
 				</div>
 			</div>
 		</div>
