@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html manifest="cache.manifest">				
 	<meta charset="utf-8">
 	<title>Judgement Card Viewer</title>
 
@@ -10,8 +10,8 @@
 
 	<link rel="stylesheet" href="css/site.css">
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+	<script src="scripts/jquery.2.1.4.min.js"></script>
+	<script src="scripts/angular.1.5.5.min.js"></script>
 </head>
 <body>
 	<div ng-app="app" ng-controller="appController">
@@ -64,10 +64,8 @@
 		</div>
 	</div>
 
-	<script type="text/javascript">
-		var app = angular.module("app", []);
-	</script>
-	<script src="components/hero-cards/directive.js"></script>
+	<script src="scripts/app.js"></script>
 	<script src="scripts/app-controller.js"></script>
+	<script src="components/hero-cards/directive.js"></script>
 </body>
 </html>

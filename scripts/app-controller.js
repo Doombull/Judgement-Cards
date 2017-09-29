@@ -1,4 +1,4 @@
-app.controller('appController', function ($scope) {
+angular.module("app").controller('appController', function ($scope) {
     
     $scope.shouldShowOverlay = function () {
         if ($scope.showEditHeros || $scope.showEditItems)

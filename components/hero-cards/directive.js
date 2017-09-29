@@ -1,4 +1,4 @@
-app.directive("heroCards",  function() {
+angular.module("app").directive("heroCards",  function() {
     return {
         templateUrl : "components/hero-cards/template.html",
         scope: {
