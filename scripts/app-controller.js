@@ -36,7 +36,6 @@ angular.module("app").controller('appController', function ($scope) {
             name: 'brok',
             displayName: 'Brok',
             maxHealth: 20,
-            selected: true,
             offensiveItem: 0,
             defensiveItem: 0
         },
