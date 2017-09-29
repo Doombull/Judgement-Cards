@@ -1,6 +1,7 @@
 CACHE MANIFEST
-# 2017-09-29 v1.1
+# 2017-09-29 v1.2
 
+index.html
 components/hero-cards/directive.js
 components/hero-cards/template.html
 css/site.css
