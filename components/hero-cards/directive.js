@@ -17,6 +17,11 @@ angular.module("app").directive("heroCards",  function() {
                 else if (!increase && scope.hero.damage.length > 0)
                     scope.hero.damage.splice(0, 1);                    
             };
+            
+            scope.toggleLevel = function($event, level) {
+                if (scope.hero.toggleLevel(level))
+                    $event.stopPropagation();
+            };
         }
     };
  });

@@ -35,6 +35,12 @@
         </div>
         <div class="back">
         	<img data-ng-src="images/{{hero.name}}-1-1.png" class="card-face" />
+        	<img src="images/check-mark-24.png" data-ng-if="hero.levels[2]" class="levelCardLevelIndicator levelTwo" />
+            <div class="levelCardLevelTarget levelTwo" data-ng-click="toggleLevel($event,2)">
+            </div>
+        	<img src="images/check-mark-24.png" data-ng-if="hero.levels[3]" class="levelCardLevelIndicator levelThree" />
+            <div class="levelCardLevelTarget levelThree" data-ng-click="toggleLevel($event,3)">
+            </div>
         </div>
     </div>
 </div>
