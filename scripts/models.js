@@ -9,11 +9,12 @@ function Hero (name, displayName, maxHealth)
         this.selected = true;
 
     this.reset = function() {
-        this.offensiveItem = 0;
+        this.damage = [];
         this.defensiveItem = 0;
         this.levels = [true, true, false, false];
-        this.damage = 0;
-        this.souls = 0;
+        this.maxSouls = 5;
+        this.offensiveItem = 0;
+        this.souls = [];
     }
     
     this.reset();

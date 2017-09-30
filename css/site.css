@@ -88,6 +88,28 @@ body
 	height: 75px;
 }
 
+.statCardSoulIndicator {
+	position: absolute;
+	top:90px;
+	height: 60px;
+	width: 60px;
+}
+
+.statCardSoulTarget {
+	position: absolute;
+	top:90px;
+	height: 60px;
+}
+
+.statCardSoulTarget.remove {
+	width:85px;
+}
+
+.statCardSoulTarget.add {
+	left:85px;
+	width:158px;
+}
+
 .statCardDamageContainer {
 	position: absolute;
 	left: 10px;
@@ -102,18 +124,18 @@ body
 	margin-bottom: 3px;
 }
 
-.statCardRemoveDamageTarget {
-	width: 90px;
+.statCardDamageTarget {
 	height: 85px;
 	position:absolute;
 	top: 256px;
 }
 
-.statCardAddDamageTarget {
+.statCardDamageTarget.remove {
+	width: 90px;
+}
+
+.statCardDamageTarget.add {
 	width: 158px;
-	height: 85px;
-	position:absolute;
-	top: 256px;
 	left: 90px;
 }
 
