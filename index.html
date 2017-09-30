@@ -19,6 +19,12 @@
 		<div data-ng-repeat="hero in heros.all | filter:{selected:true}">
 			<hero-cards hero="hero" items="items" manage-items="showManageItems($event,hero)"></hero-cards>
 		</div>
+
+		<div class="monsterContainer" data-ng-if="heros.monsters.length">
+			<div data-ng-repeat="hero in heros.monsters | filter:{selected:true}">
+				<hero-cards hero="hero" monster="true"></hero-cards>
+			</div>
+		</div>
 		
 		<div class="openEditHerosContainer">
 			<input type="button" class="openEditHeros" value="Manage Hero Cards"  data-ng-click="showEditHeros = true"/>
@@ -41,6 +47,24 @@
 						<label for="{{ hero.displayName }}">{{ hero.displayName }}</label>
 					</div>
 				</div>
+
+				<fieldset>
+					<legend>Monsters:</legend>
+					
+					<div class="list">
+						<div class="listItem" data-ng-repeat="hero in heros.monsters" ng-if="$index < (heros.monsters.length / 2)">
+							<input type="checkbox" id="{{ hero.displayName }}" data-ng-model="hero.selected" />
+							<label for="{{ hero.displayName }}">{{ hero.displayName }}</label>
+						</div>
+					</div>
+					
+					<div class="list">
+						<div class="listItem" data-ng-repeat="hero in heros.monsters" ng-if="$index >= (heros.monsters.length / 2)">
+							<input type="checkbox" id="{{ hero.displayName }}" data-ng-model="hero.selected" />
+							<label for="{{ hero.displayName }}">{{ hero.displayName }}</label>
+						</div>
+					</div>
+				</fieldset>
 			</div>
 			
 			<div class="manageWindow editItems" data-ng-click="$event.stopPropagation()" data-ng-if="showEditItems">

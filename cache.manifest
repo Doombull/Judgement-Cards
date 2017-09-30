@@ -1,11 +1,13 @@
 CACHE MANIFEST
-# 2017-09-30 v1.3
+# 2017-09-30 2133
 
 index.html
 components/hero-cards/directive.js
 components/hero-cards/template.html
 css/site.css
 images/apple-touch-icon.png
+images/ashtooth-0-0.png
+images/ashtooth-0-1.png
 images/bastian-0-0.png
 images/bastian-0-1.png
 images/bastian-1-0.png
@@ -20,6 +22,10 @@ images/doenrakkar-0-0.png
 images/doenrakkar-0-1.png
 images/doenrakkar-1-0.png
 images/doenrakkar-1-1.png
+images/gloom-0-0.png
+images/gloom-0-1.png
+images/inferno-0-0.png
+images/inferno-0-1.png
 images/istariel-0-0.png
 images/istariel-0-1.png
 images/istariel-1-0.png

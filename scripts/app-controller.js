@@ -40,6 +40,11 @@ angular.module("app").controller('appController', function ($scope) {
         new Hero('saiyin', 'Saiyin', 13, [[[4,1]],[[5,1]]]),
         new Hero('zaron', 'Zaron Bogdan', 14, [[[5,1]],[[6,1]]])
     ];
+    $scope.heros.monsters = [
+        new Hero('ashtooth', 'Ashtooth', 12),
+        new Hero('gloom', 'Gloom', 8),
+        new Hero('inferno', 'Inferno', 12)
+    ];
     
     $scope.items = {};
     $scope.items.offensive = [
@@ -54,7 +59,7 @@ angular.module("app").controller('appController', function ($scope) {
             description: 'Reduce targets RES by 1.'
         },
         {
-            displayName: 'Boots of Agility',
+            displayName: 'Boots of Elvenkind',
             cost: 1,
             description: 'Pathfinder.'
         },

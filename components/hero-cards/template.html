@@ -12,13 +12,13 @@
                     {{items.defensive[hero.defensiveItem].description}}
                 </div>
             </div>
-            <div class="statCardItemTarget" data-ng-click="manageItems({$event:$event,hero:hero})">
+            <div class="statCardItemTarget" data-ng-if="!monster" data-ng-click="manageItems({$event:$event,hero:hero})">
             </div>
 
             <img class="statCardSoulIndicator" style="left: {{ $index * 30 + 2 }}px" src="images/soul.png" data-ng-repeat="soul in hero.souls" />
-            <div class="statCardSoulTarget remove" data-ng-click="recordSoul($event,false)">
+            <div class="statCardSoulTarget remove" data-ng-if="!monster" data-ng-click="recordSoul($event,false)">
             </div>
-            <div class="statCardSoulTarget add" data-ng-click="recordSoul($event,true)">
+            <div class="statCardSoulTarget add" data-ng-if="!monster" data-ng-click="recordSoul($event,true)">
             </div>
 
             <div class="statCardDamageContainer">
@@ -47,7 +47,7 @@
     </div>
 </div>
 
-<div class="card-container {{ ruleCardFlipped ? 'flipped' : '' }}" data-ng-click="ruleCardFlipped = !ruleCardFlipped">
+<div class="card-container {{ ruleCardFlipped ? 'flipped' : '' }}" data-ng-if="!monster" data-ng-click="ruleCardFlipped = !ruleCardFlipped">
     <div class="card">
         <div class="front">
         	<img data-ng-src="images/{{hero.name}}-1-0.png" class="card-face" />

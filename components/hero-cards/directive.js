@@ -4,10 +4,14 @@ angular.module("app").directive("heroCards",  function() {
         scope: {
             hero: "=",
             items: "=",
-            manageItems: "&"
+            manageItems: "&",
+            monster: "@"
         },
         link : function(scope, element, attrs) {
             scope.hero.reset();
+
+            if (typeof scope.monster == 'undefined')
+                scope.monster = false;
 
             scope.recordDamage = function($event, increase) {
                 $event.stopPropagation();
