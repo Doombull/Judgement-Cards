@@ -25,20 +25,20 @@ angular.module("app").controller('appController', function ($scope) {
 
     $scope.heros = {};
     $scope.heros.all = [
-        new Hero('bastian', 'Bastian Oriel', 16),
-        new Hero('brok', 'Brok', 20),
-        new Hero('doenrakkar', 'Doenrakkar', 25),
-        new Hero('istariel', 'Istariel', 15),
-        new Hero('kruul', 'Kruul', 17),
-        new Hero('kvarto', 'Kvarto', 19),
-        new Hero('piper', 'Piper', 15),
-        new Hero('rakkir', 'Rakkir', 18),
-        new Hero('marcus', 'Sir Marcus', 19),
-        new Hero('skoll', 'Skoll Bonestorm', 27),
-        new Hero('thorgar', 'Thorgar', 23),
-        new Hero('thrommel', 'Thrommel Ironbeard', 22),
-        new Hero('saiyin', 'Saiyin', 15),
-        new Hero('zaron', 'Zaron Bogdan', 16)
+        new Hero('bastian', 'Bastian Oriel', 14, [[[5,1]],[[6,1]]]),
+        new Hero('brok', 'Brok', 16, [[[7,1],[8,1]],[[0,2],[1,2]]]),
+        new Hero('doenrakkar', 'Doenrakkar', 20, [[[2,2],[3,2]],[[4,2],[5,2],[6,2]]]),
+        new Hero('istariel', 'Istariel', 13, [[[4,1]],[[5,1]]]),
+        new Hero('kruul', 'Kruul', 15, [[[6,1]],[[7,1]]]),
+        new Hero('kvarto', 'Kvarto', 16, [[[7,1],[8,1]],[[0,2]]]),
+        new Hero('piper', 'Piper', 13, [[[4,1]],[[5,1]]]),
+        new Hero('rakkir', 'Rakkir', 15, [[[6,1]],[[7,1],[8,1]]]),
+        new Hero('marcus', 'Sir Marcus', 16, [[[7,1]],[[8,1],[0,2]]]),
+        new Hero('skoll', 'Skoll Bonestorm', 21, [[[3,2],[4,2],[5,2]],[[6,2],[7,2],[8,2]]], true),
+        new Hero('thorgar', 'Thorgar', 18, [[[0,2],[1,2]],[[2,2],[3,2],[4,2]]]),
+        new Hero('thrommel', 'Thrommel Ironbeard', 18, [[[0,2],[1,2]],[[2,2],[3,2]]]),
+        new Hero('saiyin', 'Saiyin', 13, [[[4,1]],[[5,1]]]),
+        new Hero('zaron', 'Zaron Bogdan', 14, [[[5,1]],[[6,1]]])
     ];
     
     $scope.items = {};

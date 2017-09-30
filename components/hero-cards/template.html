@@ -22,6 +22,8 @@
             </div>
 
             <div class="statCardDamageContainer">
+                <img class="statCardDamageMask"  src="images/damage-mask-17.png" style="{{ getDamageMaskPosition(mask) }}" data-ng-if="!hero.levels[2]" data-ng-repeat="mask in hero.damageMasks[2]"/>
+                <img class="statCardDamageMask"  src="images/damage-mask-17.png" style="{{ getDamageMaskPosition(mask) }}" data-ng-if="!hero.levels[3]" data-ng-repeat="mask in hero.damageMasks[3]"/>
                 <img class="statCardDamage"  src="images/x-mark-16.png" data-ng-repeat="damage in hero.damage"/>
             </div>
             <div class="statCardDamageTarget remove" data-ng-click="recordDamage($event,false)">
@@ -30,7 +32,17 @@
             </div>
         </div>
         <div class="back">
-        	<img data-ng-src="images/{{hero.name}}-0-1.png" class="card-face" />
+            <img data-ng-src="images/{{hero.name}}-0-1.png" class="card-face" />
+            
+            <div data-ng-if="hero.multipleAdvancementPaths">            
+                <img src="images/check-mark-24.png" data-ng-if="hero.levels[2]" class="levelCardLevelIndicator levelTwo {{ hero.multipleAdvancementPaths ? 'wide' : '' }}" />
+                <div class="levelCardLevelTarget levelTwo" data-ng-click="toggleLevel($event,2)">
+                </div>
+    
+                <img src="images/check-mark-24.png" data-ng-if="hero.levels[3]" class="levelCardLevelIndicator levelThree {{ hero.multipleAdvancementPaths ? 'wide' : '' }}" />
+                <div class="levelCardLevelTarget levelThree" data-ng-click="toggleLevel($event,3)">
+                </div>                
+            </div>
         </div>
     </div>
 </div>
@@ -43,11 +55,11 @@
         <div class="back">
             <img data-ng-src="images/{{hero.name}}-1-1.png" class="card-face" />
             
-        	<img src="images/check-mark-24.png" data-ng-if="hero.levels[2]" class="levelCardLevelIndicator levelTwo" />
+        	<img src="images/check-mark-24.png" data-ng-if="hero.levels[2]" class="levelCardLevelIndicator levelTwo {{ hero.multipleAdvancementPaths ? 'wide' : '' }}" />
             <div class="levelCardLevelTarget levelTwo" data-ng-click="toggleLevel($event,2)">
             </div>
-            
-        	<img src="images/check-mark-24.png" data-ng-if="hero.levels[3]" class="levelCardLevelIndicator levelThree" />
+
+        	<img src="images/check-mark-24.png" data-ng-if="hero.levels[3]" class="levelCardLevelIndicator levelThree {{ hero.multipleAdvancementPaths ? 'wide' : '' }}" />
             <div class="levelCardLevelTarget levelThree" data-ng-click="toggleLevel($event,3)">
             </div>
         </div>

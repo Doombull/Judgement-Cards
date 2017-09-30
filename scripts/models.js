@@ -1,11 +1,15 @@
 //Create a new Opponant
-function Hero (name, displayName, maxHealth)
+function Hero (name, displayName, maxHealth, damageMasks, multipleAdvancementPaths)
 {
 	this.name = name;
     this.displayName = displayName;
     this.maxHealth = maxHealth;
+    this.multipleAdvancementPaths = multipleAdvancementPaths;
 
-    if (name == 'bastian' || name == 'thorgar')
+    this.damageMasks = [ [], [] ];
+    this.damageMasks = this.damageMasks.concat(damageMasks);
+
+    if (name == 'bastian' || name == 'skoll')
         this.selected = true;
 
     this.reset = function() {
@@ -18,6 +22,20 @@ function Hero (name, displayName, maxHealth)
     }
     
     this.reset();
+
+    this.getCurrentMaxHealth = function() {
+        var currentMaxHealth = this.maxHealth;
+
+        if (this.levels[2]) {            
+            var currentMaxHealth = currentMaxHealth + this.damageMasks[2].length;
+
+            if (this.levels[3]) {            
+                var currentMaxHealth = currentMaxHealth + this.damageMasks[3].length;
+            }
+        }
+
+        return currentMaxHealth;
+    }
 
     this.toggleLevel = function(level) {
         //If setting level 3 to true, but level 2 is not true, dont do it

@@ -124,6 +124,10 @@ body
 	margin-bottom: 3px;
 }
 
+.statCardDamageMask {
+	position: absolute;
+}
+
 .statCardDamageTarget {
 	height: 85px;
 	position:absolute;
@@ -165,6 +169,10 @@ body
 
 .levelCardLevelIndicator.levelThree {
 	top:180px;
+}
+
+.levelCardLevelIndicator.wide {
+	left:190px;
 }
 
 .overlay {

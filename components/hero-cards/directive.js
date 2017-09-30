@@ -12,7 +12,7 @@ angular.module("app").directive("heroCards",  function() {
             scope.recordDamage = function($event, increase) {
                 $event.stopPropagation();
 
-                if (increase && scope.hero.damage.length < scope.hero.maxHealth)
+                if (increase && scope.hero.damage.length < scope.hero.getCurrentMaxHealth())
                     scope.hero.damage.push({});
                 else if (!increase && scope.hero.damage.length > 0)
                     scope.hero.damage.splice(0, 1);                    
@@ -25,6 +25,13 @@ angular.module("app").directive("heroCards",  function() {
                     scope.hero.souls.push({});
                 else if (!increase && scope.hero.souls.length > 0)
                     scope.hero.souls.splice(0, 1);                    
+            };
+            
+            scope.getDamageMaskPosition = function(mask) {
+                var left = mask[0] * 26.2;
+                var top = mask[1] * 18.4;
+
+                return 'left:' + left + 'px; top:' + top + 'px';
             };
             
             scope.toggleLevel = function($event, level) {
