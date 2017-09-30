@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# 2017-09-29 v1.2
+# 2017-09-30 v1.3
 
 index.html
 components/hero-cards/directive.js
@@ -14,6 +14,8 @@ images/brok-0-0.png
 images/brok-0-1.png
 images/brok-1-0.png
 images/brok-1-1.png
+images/check-mark-24.png
+images/damage-mask-17.png
 images/doenrakkar-0-0.png
 images/doenrakkar-0-1.png
 images/doenrakkar-1-0.png
@@ -50,6 +52,7 @@ images/skoll-0-0.png
 images/skoll-0-1.png
 images/skoll-1-0.png
 images/skoll-1-1.png
+images/soul.png
 images/thorgar-0-0.png
 images/thorgar-0-1.png
 images/thorgar-1-0.png
@@ -67,6 +70,7 @@ scripts/angular.1.5.5.min.js
 scripts/app-controller.js
 scripts/app.js
 scripts/jquery.2.1.4.min.js
+scripts/models.js
 
 NETWORK:
 

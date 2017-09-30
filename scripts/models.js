@@ -9,9 +9,6 @@ function Hero (name, displayName, maxHealth, damageMasks, multipleAdvancementPat
     this.damageMasks = [ [], [] ];
     this.damageMasks = this.damageMasks.concat(damageMasks);
 
-    if (name == 'bastian' || name == 'skoll')
-        this.selected = true;
-
     this.reset = function() {
         this.damage = [];
         this.defensiveItem = 0;
