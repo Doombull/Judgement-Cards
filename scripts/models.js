@@ -33,6 +33,10 @@ function Hero (name, displayName, maxHealth, damageMasks, multipleAdvancementPat
 
         return currentMaxHealth;
     }
+    
+    this.getCurrentHealth = function() {
+        return this.getCurrentMaxHealth() - this.damage.length;
+    }
 
     this.toggleLevel = function(level) {
         //If setting level 3 to true, but level 2 is not true, dont do it

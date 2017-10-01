@@ -175,6 +175,14 @@ body
 	left:190px;
 }
 
+.currentHealthContainer {
+	position: absolute;
+	top: 306px;
+	color: white;
+	opacity: 0.5;
+	font-size: 30pt;
+}
+
 
 .monsterContainer {
 	clear: both;
