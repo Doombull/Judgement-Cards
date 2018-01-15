@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# 2017-12-29 2157
+# 2017-01-15 21:39
 
 index.html
 components/hero-cards/directive.js
@@ -8,6 +8,10 @@ css/site.css
 images/apple-touch-icon.png
 images/ashtooth-0-0.png
 images/ashtooth-0-1.png
+images/allandir-0-0.png
+images/allandir-0-1.png
+images/allandir-1-0.png
+images/allandir-1-1.png
 images/bastian-0-0.png
 images/bastian-0-1.png
 images/bastian-1-0.png
@@ -38,10 +42,18 @@ images/kvarto-0-0.png
 images/kvarto-0-1.png
 images/kvarto-1-0.png
 images/kvarto-1-1.png
+images/loribela-0-0.png
+images/loribela-0-1.png
+images/loribela-1-0.png
+images/loribela-1-1.png
 images/marcus-0-0.png
 images/marcus-0-1.png
 images/marcus-1-0.png
 images/marcus-1-1.png
+images/nephenee-0-0.png
+images/nephenee-0-1.png
+images/nephenee-1-0.png
+images/nephenee-1-1.png
 images/piper-0-0.png
 images/piper-0-1.png
 images/piper-1-0.png
@@ -68,6 +80,10 @@ images/thrommel-0-1.png
 images/thrommel-1-0.png
 images/thrommel-1-1.png
 images/x-mark-16.png
+images/xyvera-0-0.png
+images/xyvera-0-1.png
+images/xyvera-1-0.png
+images/xyvera-1-1.png
 images/zaron-0-0.png
 images/zaron-0-1.png
 images/zaron-1-0.png
