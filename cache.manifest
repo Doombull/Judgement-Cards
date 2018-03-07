@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# 2017-01-15 23:59
+# 2018-03-07 21:03
 
 index.html
 components/hero-cards/directive.js
@@ -26,6 +26,10 @@ images/doenrakkar-0-0.png
 images/doenrakkar-0-1.png
 images/doenrakkar-1-0.png
 images/doenrakkar-1-1.png
+images/gendris-0-0.png
+images/gendris-0-1.png
+images/gendris-1-0.png
+images/gendris-1-1.png
 images/gloom-0-0.png
 images/gloom-0-1.png
 images/inferno-0-0.png
@@ -34,6 +38,10 @@ images/istariel-0-0.png
 images/istariel-0-1.png
 images/istariel-1-0.png
 images/istariel-1-1.png
+images/kogan-0-0.png
+images/kogan-0-1.png
+images/kogan-1-0.png
+images/kogan-1-1.png
 images/kruul-0-0.png
 images/kruul-0-1.png
 images/kruul-1-0.png
