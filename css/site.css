@@ -240,7 +240,7 @@ body
 }
 
 .manageWindow .list{
-	width: 50%;
+	width: 33%;
 	float: left;
 }
 
@@ -259,8 +259,8 @@ body
 }
 
 .editHeros{
-	width: 500px;
-	height: 640px;
+	width: 750px;
+	height: 620px;
 }
 
 .editItems{

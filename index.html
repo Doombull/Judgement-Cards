@@ -35,20 +35,27 @@
 				<div class="heading">Manage Hero Cards</div>
 
 				<div class="list">
-					<div class="listItem" data-ng-repeat="hero in heros.all" ng-if="$index < (heros.all.length / 2)">
+					<div class="listItem" data-ng-repeat="hero in heros.all" ng-if="IsInGroup($index, 1, 3)">
 						<input type="checkbox" id="{{ hero.displayName }}" data-ng-model="hero.selected" />
 						<label for="{{ hero.displayName }}">{{ hero.displayName }}</label>
 					</div>
 				</div>
 				
 				<div class="list">
-					<div class="listItem" data-ng-repeat="hero in heros.all" ng-if="$index >= (heros.all.length / 2)">
+					<div class="listItem" data-ng-repeat="hero in heros.all" ng-if="IsInGroup($index, 2, 3)">
+						<input type="checkbox" id="{{ hero.displayName }}" data-ng-model="hero.selected" />
+						<label for="{{ hero.displayName }}">{{ hero.displayName }}</label>
+					</div>
+				</div>
+				
+				<div class="list">
+					<div class="listItem" data-ng-repeat="hero in heros.all" ng-if="IsInGroup($index, 3, 3)">
 						<input type="checkbox" id="{{ hero.displayName }}" data-ng-model="hero.selected" />
 						<label for="{{ hero.displayName }}">{{ hero.displayName }}</label>
 					</div>
 				</div>
 
-				<fieldset>
+				<fieldset style="clear: both">
 					<legend>Monsters:</legend>
 					
 					<div class="list">

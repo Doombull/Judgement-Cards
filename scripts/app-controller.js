@@ -23,6 +23,20 @@ angular.module("app").controller('appController', function ($scope) {
         }
     };
 
+    $scope.IsInGroup = function (hero, currentGroup, totalGroups) {
+
+        heroPos = (hero + 1);
+        heroesPerGroup = Math.ceil($scope.heros.all.length / totalGroups);
+
+        //if more than last group
+        if (heroPos > (currentGroup - 1) * heroesPerGroup &&
+            heroPos <= (currentGroup) * heroesPerGroup
+            )
+            return true;
+        
+        return false;
+    };
+
     $scope.heros = {};
     $scope.heros.all = [
         new Hero('allandir', 'Allandir', 14, [[[5,1]],[[6,1]]]),
@@ -30,6 +44,7 @@ angular.module("app").controller('appController', function ($scope) {
         new Hero('brok', 'Brok', 16, [[[7,1],[8,1]],[[0,2],[1,2]]]),
         new Hero('doenrakkar', 'Doenrakkar', 20, [[[2,2],[3,2]],[[4,2],[5,2],[6,2]]]),
         new Hero('gendris', 'Gendris', 16, [[[7,1],[8,1]],[[0,2],[1,2]]]),
+        new Hero('haksa', 'Haksa', 16, [[[7,1]],[[8,1],[0,2]]]),
         new Hero('istariel', 'Istariel', 13, [[[4,1]],[[5,1]]]),
         new Hero('kogan', 'Kogan', 18, [[[0,2],[1,2]],[[2,2],[3,2],[4,2]]]),
         new Hero('kruul', 'Kruul', 15, [[[6,1]],[[7,1]]]),
@@ -39,17 +54,24 @@ angular.module("app").controller('appController', function ($scope) {
         new Hero('piper', 'Piper', 13, [[[4,1]],[[5,1]]]),
         new Hero('rakkir', 'Rakkir', 15, [[[6,1]],[[7,1],[8,1]]]),
         new Hero('marcus', 'Sir Marcus', 16, [[[7,1]],[[8,1],[0,2]]]),
+        new Hero('saiyin', 'Saiyin', 13, [[[4,1]],[[5,1]]]),
         new Hero('skoll', 'Skoll Bonestorm', 21, [[[3,2],[4,2],[5,2]],[[6,2],[7,2],[8,2]]], true),
+        new Hero('skye', 'Skye', 15, [[[6,1]],[[7,1],[8,1]]]),
+        new Hero('styx', 'Styx', 14, [[[5,1]],[[6,1]]]),
+        new Hero('svetlana', 'Svetlana', 15, [[[6,1]],[[7,1]]]),
         new Hero('thorgar', 'Thorgar', 18, [[[0,2],[1,2]],[[2,2],[3,2],[4,2]]]),
         new Hero('thrommel', 'Thrommel Ironbeard', 18, [[[0,2],[1,2]],[[2,2],[3,2]]]),
-        new Hero('saiyin', 'Saiyin', 13, [[[4,1]],[[5,1]]]),
+        new Hero('viktor', 'Viktor Clerval', 12, [[[3,1]],[[4,1]]]),
         new Hero('xyvera', 'Xyvera', 16, [[[7,1],[8,1]],[[0,2],[1,2]]]),
-        new Hero('zaron', 'Zaron Bogdan', 14, [[[5,1]],[[6,1]]])
+        new Hero('zaffen', 'Zaffen Ironhelm', 16, [[[7,1]],[[8,1]]]),
+        new Hero('zaron', 'Zaron Bogdan', 14, [[[5,1]],[[6,1]]]),
+        new Hero('zhonyja', 'Zhonyja', 15, [[[6,1]],[[7,1]]])
     ];
     $scope.heros.monsters = [
         new Hero('ashtooth', 'Ashtooth', 12),
         new Hero('gloom', 'Gloom', 8),
-        new Hero('inferno', 'Inferno', 12)
+        new Hero('inferno', 'Inferno', 12),
+        new Hero('vujasha', 'Vujasha', 10)
     ];
 
     $scope.items = {};

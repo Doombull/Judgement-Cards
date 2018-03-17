@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# 2018-03-07 21:03
+# 2018-03-17 1828
 
 index.html
 components/hero-cards/directive.js
@@ -32,6 +32,10 @@ images/gendris-1-0.png
 images/gendris-1-1.png
 images/gloom-0-0.png
 images/gloom-0-1.png
+images/haksa-0-0.png
+images/haksa-0-1.png
+images/haksa-1-0.png
+images/haksa-1-1.png
 images/inferno-0-0.png
 images/inferno-0-1.png
 images/istariel-0-0.png
@@ -78,6 +82,18 @@ images/skoll-0-0.png
 images/skoll-0-1.png
 images/skoll-1-0.png
 images/skoll-1-1.png
+images/skye-0-0.png
+images/skye-0-1.png
+images/skye-1-0.png
+images/skye-1-1.png
+images/styx-0-0.png
+images/styx-0-1.png
+images/styx-1-0.png
+images/styx-1-1.png
+images/svetlana-0-0.png
+images/svetlana-0-1.png
+images/svetlana-1-0.png
+images/svetlana-1-1.png
 images/soul.png
 images/thorgar-0-0.png
 images/thorgar-0-1.png
@@ -87,15 +103,27 @@ images/thrommel-0-0.png
 images/thrommel-0-1.png
 images/thrommel-1-0.png
 images/thrommel-1-1.png
+images/viktor-0-0.png
+images/viktor-0-1.png
+images/viktor-1-0.png
+images/viktor-1-1.png
 images/x-mark-16.png
 images/xyvera-0-0.png
 images/xyvera-0-1.png
 images/xyvera-1-0.png
 images/xyvera-1-1.png
+images/zaffen-0-0.png
+images/zaffen-0-1.png
+images/zaffen-1-0.png
+images/zaffen-1-1.png
 images/zaron-0-0.png
 images/zaron-0-1.png
 images/zaron-1-0.png
 images/zaron-1-1.png
+images/zhonyja-0-0.png
+images/zhonyja-0-1.png
+images/zhonyja-1-0.png
+images/zhonyja-1-1.png
 scripts/angular.1.5.5.min.js
 scripts/app-controller.js
 scripts/app.js
