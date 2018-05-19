@@ -40,6 +40,7 @@ angular.module("app").controller('appController', function ($scope) {
     $scope.heros = {};
     $scope.heros.all = [
         new Hero('allandir', 'Allandir', 14, [[[5,1]],[[6,1]]]),
+        new Hero('barnascus', 'Barnascus', 16, [[[7,1],[8,1]],[[0,2],[1,2]]]),
         new Hero('bastian', 'Bastian Oriel', 14, [[[5,1]],[[6,1]]]),
         new Hero('brok', 'Brok', 16, [[[7,1],[8,1]],[[0,2],[1,2]]]),
         new Hero('doenrakkar', 'Doenrakkar', 20, [[[2,2],[3,2]],[[4,2],[5,2],[6,2]]]),
@@ -121,7 +122,7 @@ angular.module("app").controller('appController', function ($scope) {
         {
             displayName: 'Blood Sucker',
             cost: 1,
-            description: 'Leech(1).'
+            description: 'Leech(2).'
         },
         {
             displayName: 'Boots of Agility',
@@ -151,7 +152,7 @@ angular.module("app").controller('appController', function ($scope) {
         {
             displayName: 'Minotaur Essence',
             cost: 1,
-            description: 'Regeneration(1).'
+            description: 'Regeneration(2).'
         }
     ];
 });
