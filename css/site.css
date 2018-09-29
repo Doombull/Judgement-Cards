@@ -264,6 +264,14 @@ body
 }
 
 .editItems{
-	width: 850px;
-	height: 600px;
+	width: 950px;
+	height: 700px;
+}
+
+.manageWindow.editItems .listItem{
+	font-size: 12pt;
+}
+
+.manageWindow.editItems .listItem .description{
+	font-size: 10pt;
 }

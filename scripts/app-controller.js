@@ -47,9 +47,9 @@ angular.module("app").controller('appController', function ($scope) {
         new Hero('gendris', 'Gendris', 16, [[[7,1],[8,1]],[[0,2],[1,2]]]),
         new Hero('haksa', 'Haksa', 16, [[[7,1]],[[8,1],[0,2]]]),
         new Hero('istariel', 'Istariel', 13, [[[4,1]],[[5,1]]]),
-        new Hero('kogan', 'Kogan', 18, [[[0,2],[1,2]],[[2,2],[3,2],[4,2]]]),
+        new Hero('kogan', 'Kogan', 16, [[[7,1],[8,1]],[[0,2],[1,2],[2,2]]]),
         new Hero('kruul', 'Kruul', 15, [[[6,1]],[[7,1]]]),
-        new Hero('kvarto', 'Kvarto', 16, [[[7,1],[8,1]],[[0,2]]]),
+        new Hero('kvarto', 'Kvarto', 16, [[[7,1]],[[8,1],[0,2]]]),
         new Hero('loribela', 'Loribela Runeflask', 16, [[[7,1]],[[8,1],[0,2]]]),
         new Hero('nephenee', 'Nephenee', 14, [[[5,1]],[[6,1]]]),
         new Hero('piper', 'Piper', 13, [[[4,1]],[[5,1]]]),
@@ -103,9 +103,24 @@ angular.module("app").controller('appController', function ($scope) {
             description: '+1 RNG.'
         },
         {
+            displayName: 'Hunter\'s Knife',
+            cost: 1,
+            description: '+2 damage vs Monsters on Basic Attacks.'
+        },
+        {
+            displayName: 'Potion of Ogre Strength',
+            cost: 1,
+            description: '+1 damage vs Heroes for one activation.'
+        },
+        {
             displayName: 'Ring of Power',
             cost: 1,
             description: '+1 MAG.'
+        },
+        {
+            displayName: 'Tome of Expirience',
+            cost: 2,
+            description: 'Spend 1A to gain a level. Remove artifact from game.'
         },
         {
             displayName: 'Vorpal Blade',
@@ -128,6 +143,16 @@ angular.module("app").controller('appController', function ($scope) {
             displayName: 'Boots of Agility',
             cost: 1,
             description: '+1 AGI.'
+        },
+        {
+            displayName: 'Boots of Stability',
+            cost: 1,
+            description: 'Steady.'
+        },
+        {
+            displayName: 'Bracers of Disruption',
+            cost: 1,
+            description: 'Spend 1 fate to ignore a Combat Manoeuvre.'
         },
         {
             displayName: 'Elixir of Life',
@@ -153,6 +178,21 @@ angular.module("app").controller('appController', function ($scope) {
             displayName: 'Minotaur Essence',
             cost: 1,
             description: 'Regeneration(2).'
+        },
+        {
+            displayName: 'Null Stone',
+            cost: 1,
+            description: 'Enemies do not gain stat bonuses from artifacts against attacks from or against this model.'
+        },
+        {
+            displayName: 'Ring of Invisibility',
+            cost: 1,
+            description: 'Gain the active ability: Invisibility (1A)'
+        },
+        {
+            displayName: 'Ring of Teleportation',
+            cost: 1,
+            description: 'Effigy recall is 1A instead of 2A.'
         }
     ];
 });
